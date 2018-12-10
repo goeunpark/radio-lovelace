@@ -20,11 +20,13 @@ const RadioSet = (props) => {
       <section className="radio-set--playlist-container">
         <Playlist
             markStarredCallback={props.markStarredCallback}
+            sendTopCallback={props.sendTopCallback}
           side="Morning"
           tracks={playlists.morningTracks}
         />
         <Playlist
             markStarredCallback={props.markStarredCallback}
+            sendTopCallback={props.sendTopCallback}
           side="Evening"
           tracks={playlists.eveningTracks}
         />

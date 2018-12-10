@@ -37,6 +37,7 @@ const Playlist = (props) => {
     return (
       <Track
         markStarredCallback={props.markStarredCallback}
+        sendTopCallback={props.sendTopCallback}
         key={`${track.title}${track.artist}`}
         {...track}
         />
