@@ -18,15 +18,26 @@ class App extends Component {
     };
   };
 
+  markStarred = (id) => {
+    let updatedTracks = this.state.tracks;
+
+    updatedTracks[id].favorite = !updatedTracks[id].favorite;
+    this.setState({tracks: updatedTracks});
+  };
+
+
   render() {
+
     return (
       <div className="App">
         <header>
           <h1 className="page-header--title">Radio Lovelace</h1>
         </header>
         <main className="main">
-          
-          <RadioSet tracks={this.state.tracks} />
+
+          <RadioSet
+            markStarredCallback={this.markStarred}
+            tracks={this.state.tracks} />
         </main>
       </div>
 
