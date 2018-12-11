@@ -38,6 +38,7 @@ const Playlist = (props) => {
       <Track
         markStarredCallback={props.markStarredCallback}
         sendTopCallback={props.sendTopCallback}
+        switchListCallback={props.switchListCallback}
         key={`${track.title}${track.artist}`}
         {...track}
         />
